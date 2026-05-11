@@ -90,9 +90,7 @@ export default function LandingPage() {
               </Link>
               <a 
                 href="https://wa.me/916238193133?text=Hi%2C%20I%20am%20interested%20in%20the%20Lumea%20Wellness%20hardware%20catalog."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-white/20 px-10 py-5 text-[10px] uppercase tracking-widest font-bold hover:bg-white/5 transition-colors rounded-xs text-accent-gold inline-flex items-center justify-center"
+                className="relative z-50 cursor-pointer border border-white/20 px-10 py-5 text-[10px] uppercase tracking-widest font-bold hover:bg-white/5 transition-colors rounded-xs text-accent-gold inline-flex items-center justify-center"
               >
                 Request Catalog
               </a>
