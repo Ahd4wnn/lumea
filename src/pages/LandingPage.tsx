@@ -12,7 +12,7 @@ export default function LandingPage() {
       icon: <Snowflake className="text-accent-ice" size={24} />,
       color: 'bg-accent-ice/5',
       borderColor: 'border-accent-ice/20',
-      image: 'https://images.unsplash.com/photo-1576426863848-c21f53c60419?auto=format&fit=crop&q=80&w=1200'
+      image: '/ice.jpeg'
     },
     {
       id: 'steam',
@@ -22,7 +22,7 @@ export default function LandingPage() {
       icon: <Wind className="text-accent-gold" size={24} />,
       color: 'bg-accent-gold/5',
       borderColor: 'border-accent-gold/20',
-      image: 'https://images.unsplash.com/photo-1544161515-4508f5d0f8c3?auto=format&fit=crop&q=80&w=1200'
+      image: '/steam.jpeg'
     },
     {
       id: 'red',
@@ -32,7 +32,7 @@ export default function LandingPage() {
       icon: <Zap className="text-accent-red" size={24} />,
       color: 'bg-accent-red/5',
       borderColor: 'border-accent-red/20',
-      image: 'https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?auto=format&fit=crop&q=80&w=1200'
+      image: '/redlight.jpg'
     }
   ];
 
@@ -46,29 +46,29 @@ export default function LandingPage() {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           {/* Desktop Video */}
-          <video 
-            autoPlay 
-            muted 
-            loop 
+          <video
+            autoPlay
+            muted
+            loop
             playsInline
-            className="hidden md:block w-full h-full object-cover grayscale opacity-40"
+            className="hidden md:block w-full h-full object-cover opacity-50"
           >
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-luxury-bathroom-with-a-view-of-the-city-at-night-42171-large.mp4" type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
           </video>
-          
+
           {/* Mobile Image */}
-          <img 
-            src="https://allthepics.net/images/2026/05/11/Bathtub-with-book-glass-202605112326.jpg" 
+          <img
+            src="/hero-image.jpeg"
             alt="Luxury sanctuary mobile"
-            className="md:hidden w-full h-full object-cover grayscale opacity-40"
+            className="md:hidden w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/0 via-background/40 to-background"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeOut' }}
@@ -101,7 +101,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-24">
             {features.map((feature, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -163,11 +163,11 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] rounded-xs overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?auto=format&fit=crop&q=80&w=1200" 
+              <div className="aspect-[4/5] rounded-xs overflow-hidden bg-black">
+                <img
+                  src="https://images.unsplash.com/photo-1579126038374-6064e9370f0f?auto=format&fit=crop&q=80&w=1200"
                   alt="Biological recovery"
-                  className="w-full h-full object-cover grayscale opacity-60"
+                  className="w-full h-full object-cover opacity-40"
                 />
               </div>
               <div className="absolute -bottom-8 -left-8 bg-surface-bright p-8 border border-white/5 hidden md:block max-w-xs">
@@ -190,18 +190,18 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <motion.div 
+              <motion.div
                 key={product.id}
                 whileHover={{ y: -10 }}
                 className={`shimmer-border group bg-surface-bright/30 rounded-lg overflow-hidden border border-white/5`}
               >
-                <div className="aspect-[4/3] overflow-hidden relative">
-                  <img 
-                    src={product.image} 
+                <div className="aspect-[4/3] overflow-hidden relative bg-black">
+                  <img
+                    src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-60 group-hover:opacity-100"
+                    className="w-full h-full object-cover transition-all duration-500 opacity-40 group-hover:opacity-80 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80 group-hover:opacity-40 transition-opacity duration-500"></div>
                 </div>
                 <div className="p-8 space-y-4">
                   <div className="flex justify-between items-start">
@@ -214,8 +214,8 @@ export default function LandingPage() {
                   <p className="text-muted text-sm leading-relaxed min-h-[48px]">
                     {product.description}
                   </p>
-                  <Link 
-                    to="/shop" 
+                  <Link
+                    to="/shop"
                     className="inline-flex items-center gap-2 text-[9px] uppercase tracking-[0.3em] font-bold text-primary hover:gap-4 transition-all"
                   >
                     Specifications <ArrowRight size={14} />
