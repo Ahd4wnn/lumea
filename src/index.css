@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0d0d0d;
+  --color-surface: #1a1a1a;
+  --color-surface-dim: #121212;
+  --color-surface-bright: #262626;
+  --color-primary: #ffffff;
+  --color-on-primary: #000000;
+  --color-muted: #787776;
+  --color-accent-ice: #e0f7fa;
+  --color-accent-gold: #E5C76B;
+  --color-accent-red: #ff3b30;
+  
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Manrope", sans-serif;
+  
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-sans antialiased selection:bg-white selection:text-black;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    @apply font-display tracking-tight;
+  }
+}
+
+.shimmer-border {
+  @apply relative overflow-hidden;
+}
+
+.shimmer-border::after {
+  content: "";
+  @apply absolute inset-0 pointer-events-none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
