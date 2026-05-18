@@ -7,11 +7,11 @@ export default function Header() {
   const isShop = location.pathname === '/shop';
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#000000] border-b border-white/5">
       <nav className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
         <div className="flex items-center gap-12">
           <Link to="/" className="hover:opacity-80 transition-opacity">
-            <img src="/logo.png" alt="Lumea Wellness" className="h-10 object-contain" />
+            <img src="/logo.png" alt="Lumea Wellness" className="h-16 object-contain" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8 text-[10px] uppercase tracking-[0.3em] font-medium text-muted">
