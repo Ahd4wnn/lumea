@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { PRODUCTS } from '../constants/products';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -115,13 +115,20 @@ export default function ProductDetailPage() {
             <button 
               onClick={() => {
                 const message = `Hello LUMEA, I am interested in inquiring about the ${product.name}: ${selectedVariant?.type} (${selectedVariant?.code}).`;
-                window.open(`https://wa.me/916238193133?text=${encodeURIComponent(message)}`, '_blank');
+                window.open(`https://wa.me/919539000041?text=${encodeURIComponent(message)}`, '_blank');
               }}
               className="group w-full bg-[#1b4342] hover:bg-[#255756] text-white py-6 text-[10px] uppercase tracking-[0.4em] font-bold transition-all flex items-center justify-center gap-4 rounded-sm mb-12"
             >
               ENQUIRE TO SANCTUARY <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </button>
 
+            <a
+              href={product.brochure}
+              download
+              className="group w-full border border-white/20 hover:bg-white/5 text-white py-6 text-[10px] uppercase tracking-[0.4em] font-bold transition-all flex items-center justify-center gap-4 rounded-sm mb-12"
+            >
+              <Download size={14} /> Download Brochure
+            </a>
             <div className="grid grid-cols-2 gap-12 pt-12 border-t border-white/10">
               <div className="space-y-2">
                 <h5 className="text-[9px] uppercase tracking-widest font-bold text-muted">SHIPS GLOBALLY IN</h5>

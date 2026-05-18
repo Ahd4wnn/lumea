@@ -47,23 +47,15 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
-          {/* Desktop Video */}
           <video
             autoPlay
             muted
             loop
             playsInline
-            className="hidden md:block w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-50"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
-
-          {/* Mobile Image */}
-          <img
-            src="/hero-image.jpeg"
-            alt="Luxury sanctuary mobile"
-            className="md:hidden w-full h-full object-cover opacity-50"
-          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background"></div>
         </div>
 
@@ -89,7 +81,7 @@ export default function LandingPage() {
                 Explore Hardware
               </Link>
               <a 
-                href="https://wa.me/916238193133?text=Hi%2C%20I%20am%20interested%20in%20the%20Lumea%20Wellness%20hardware%20catalog."
+                href="https://wa.me/919539000041?text=Hi%2C%20I%20am%20interested%20in%20the%20Lumea%20Wellness%20hardware%20catalog."
                 className="relative z-50 cursor-pointer border border-white/20 px-10 py-5 text-[10px] uppercase tracking-widest font-bold hover:bg-white/5 transition-colors rounded-xs text-accent-gold inline-flex items-center justify-center"
               >
                 Request Catalog

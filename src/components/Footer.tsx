@@ -6,13 +6,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-2xl font-display tracking-[0.2em] mb-6 text-white">
-              <span className="text-[#8b5cf6]">L</span>UMEA
-            </h3>
-            <p className="text-muted text-sm leading-relaxed max-w-xs">
+            <img src="/logo.png" alt="Lumea Wellness" className="h-14 object-contain mb-6" />
+            <p className="text-muted text-sm leading-relaxed max-w-xs mb-6">
               Architectural luxury defined through clinical precision and silent performance. 
               Built for the discerning human.
             </p>
+            <div className="text-muted text-sm leading-relaxed space-y-1">
+              <p>Phone: 9539000041, 79070 47468</p>
+              <p>Email: lumeawellness80@gmail.com</p>
+            </div>
           </div>
           
           <div>

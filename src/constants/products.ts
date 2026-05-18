@@ -14,6 +14,7 @@ export interface Product {
   color: string;
   image: string;
   images: string[];
+  brochure: string;
   variants: ProductVariant[];
 }
 
@@ -31,7 +32,8 @@ export const PRODUCTS: Product[] = [
     ],
     color: 'accent-ice',
     image: '/ice.jpeg',
-    images: ['/ice.jpeg'],
+    images: ['/ice.jpeg', '/icegen.png'],
+    brochure: '/brochures/ice-bath.pdf',
     variants: [
       { type: 'Water Chiller Capacity 1 Ton', code: 'LWC-WP-00-1000KW', description: 'Entry-level professional cooling system' },
       { type: 'Water Chiller Capacity 2 Ton', code: 'LWC-WP-00-2000KW', description: 'Mid-capacity commercial recovery system' },
@@ -51,7 +53,8 @@ export const PRODUCTS: Product[] = [
     ],
     color: 'accent-gold',
     image: '/steam.jpeg',
-    images: ['/steam.jpeg'],
+    images: ['/steam.jpeg', '/steamgen.png', '/digitalctrl.png'],
+    brochure: '/brochures/steam-bath.pdf',
     variants: [
       { type: 'Steam Generator', code: 'LSG-WP-00-4.5KW', power: '4.5 KW' },
       { type: 'Steam Generator', code: 'LSG-WP-00-6KW', power: '6 KW' },
@@ -76,6 +79,7 @@ export const PRODUCTS: Product[] = [
     color: 'accent-red',
     image: '/redlight.jpg',
     images: ['/redlight.jpg'],
+    brochure: '/brochures/red-light-therapy.pdf',
     variants: [
       { type: 'Red Light Therapy Panel Pro', code: 'LRP-WP-00-200', description: 'Home & clinic professional panel' },
       { type: 'Red Light Therapy Panel Ultra', code: 'LRP-WP-00-300', description: 'Advanced full-body commercial panel' }
