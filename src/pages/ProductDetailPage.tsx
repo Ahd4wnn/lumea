@@ -8,6 +8,7 @@ export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
   const product = PRODUCTS.find((p) => p.id === id);
   const [selectedVariant, setSelectedVariant] = useState(product?.variants[0]);
+  const [activeImage, setActiveImage] = useState(0);
 
   if (!product) {
     return (
@@ -20,22 +21,45 @@ export default function ProductDetailPage() {
     );
   }
 
+  const images = product.images.length > 0 ? product.images : [product.image];
+
   return (
     <div className="pt-20">
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-          {/* Left: Product Image */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden flex items-center justify-center p-12"
-          >
-            <img 
-              src={product.image} 
-              alt={product.name}
-              className="w-full h-full object-cover grayscale opacity-90 transition-all duration-700 hover:scale-105"
-            />
-          </motion.div>
+          {/* Left: Product Images */}
+          <div className="space-y-4">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="aspect-[4/5] bg-[#0a0a0a] overflow-hidden flex items-center justify-center"
+            >
+              <img 
+                src={images[activeImage]} 
+                alt={product.name}
+                className="w-full h-full object-cover opacity-90 transition-all duration-500 hover:scale-105"
+              />
+            </motion.div>
+
+            {/* Thumbnail strip — only shows when there are multiple images */}
+            {images.length > 1 && (
+              <div className="flex gap-3 overflow-x-auto no-scrollbar">
+                {images.map((img, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveImage(i)}
+                    className={`shrink-0 w-20 h-20 overflow-hidden border-2 transition-all duration-300 ${
+                      activeImage === i 
+                        ? 'border-white opacity-100' 
+                        : 'border-white/10 opacity-50 hover:opacity-80'
+                    }`}
+                  >
+                    <img src={img} alt={`${product.name} view ${i + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
 
           {/* Right: Product Details */}
           <motion.div 
@@ -114,3 +138,4 @@ export default function ProductDetailPage() {
     </div>
   );
 }
+

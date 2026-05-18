@@ -32,7 +32,7 @@ export default function ShopPage() {
                   <img 
                     src={p.image} 
                     alt={p.name}
-                    className="w-full h-full object-cover grayscale opacity-40 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
                   />
                   <div className="absolute top-4 left-4">
                     <span className={`text-[8px] uppercase tracking-widest font-bold px-2 py-1 bg-background/80 backdrop-blur rounded-full border border-white/10 text-white`}>

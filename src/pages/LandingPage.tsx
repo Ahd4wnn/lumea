@@ -26,7 +26,7 @@ export default function LandingPage() {
     },
     {
       id: 'red',
-      title: 'Lumea RLT Panel',
+      title: 'Lumea Red Light Therapy',
       subtitle: 'Photobiomodulation',
       description: 'Clinical 660nm/850nm dual-chip arrays designed to stimulate mitochondrial ATP production and cellular repair.',
       icon: <Zap className="text-accent-red" size={24} />,
@@ -159,7 +159,7 @@ export default function LandingPage() {
                   <div>
                     <h4 className="text-sm uppercase tracking-widest mb-2 font-bold">Mitochondrial ATP Synthesis</h4>
                     <p className="text-muted text-sm leading-relaxed">
-                      RLT panels utilize specific 660nm and 850nm wavelengths to penetrate dermal layers, fueling the mitochondria to produce ATP and accelerate tissue repair.
+                      Red Light Therapy panels utilize specific 660nm and 850nm wavelengths to penetrate dermal layers, fueling the mitochondria to produce ATP and accelerate tissue repair.
                     </p>
                   </div>
                 </div>
