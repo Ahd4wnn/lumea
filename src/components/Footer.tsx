@@ -2,11 +2,11 @@ import { Instagram, Twitter, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-surface-dim border-t border-white/5 pt-24 pb-12">
+    <footer className="bg-[#000000] border-t border-white/5 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-1">
-            <img src="/logo.png" alt="Lumea Wellness" className="h-14 object-contain mb-6" />
+            <img src="/logo.png" alt="Lumea Wellness" className="h-20 object-contain mb-6" />
             <p className="text-muted text-sm leading-relaxed max-w-xs mb-6">
               Architectural luxury defined through clinical precision and silent performance. 
               Built for the discerning human.
