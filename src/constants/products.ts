@@ -54,7 +54,7 @@ export const PRODUCTS: Product[] = [
     color: 'accent-gold',
     image: '/steam.jpeg',
     images: ['/steam.jpeg', '/steamgen.png', '/digitalctrl.png'],
-    brochure: '/brochures/steam-bath.pdf',
+    brochure: '/brochures/steam.pdf',
     variants: [
       { type: 'Steam Generator', code: 'LSG-WP-00-4.5KW', power: '4.5 KW' },
       { type: 'Steam Generator', code: 'LSG-WP-00-6KW', power: '6 KW' },
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
     color: 'accent-red',
     image: '/redlight.jpg',
     images: ['/redlight.jpg'],
-    brochure: '/brochures/red-light-therapy.pdf',
+    brochure: '/brochures/red-light.pdf',
     variants: [
       { type: 'Red Light Therapy Panel Pro', code: 'LRP-WP-00-200', description: 'Home & clinic professional panel' },
       { type: 'Red Light Therapy Panel Ultra', code: 'LRP-WP-00-300', description: 'Advanced full-body commercial panel' }
