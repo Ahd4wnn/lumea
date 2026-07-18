@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Snowflake, Wind, Zap } from 'lucide-react';
+import { ArrowRight, Snowflake, Wind, Zap, Flame, Waves } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
@@ -33,6 +33,26 @@ export default function LandingPage() {
       color: 'bg-accent-red/5',
       borderColor: 'border-accent-red/20',
       image: '/redlight.jpg'
+    },
+    {
+      id: 'sauna',
+      title: 'Lumea Sauna Bath',
+      subtitle: 'Thermal Therapy',
+      description: 'Finnish pine sauna systems with 60–100°C heat range — available in dry, steam and infrared configurations with custom sizing.',
+      icon: <Flame className="text-accent-gold" size={24} />,
+      color: 'bg-accent-gold/5',
+      borderColor: 'border-accent-gold/20',
+      image: '/sauna.jpg'
+    },
+    {
+      id: 'jacuzzi',
+      title: 'Lumea Jacuzzi & Bath Tubs',
+      subtitle: 'Hydrotherapy',
+      description: 'Luxury hydrotherapy jets, chromotherapy LED lighting and fully customisable configurations from 1 to 10+ persons.',
+      icon: <Waves className="text-accent-ice" size={24} />,
+      color: 'bg-accent-ice/5',
+      borderColor: 'border-accent-ice/20',
+      image: '/jacuzzi.jpg'
     }
   ];
 
